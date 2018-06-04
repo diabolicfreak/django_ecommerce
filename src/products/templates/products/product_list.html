@@ -1,5 +1,9 @@
-{% for product in object_list %}
-  <li>
-    <a href="{{ product.get_absolute_url }}">{{product.title}}</a>
-  </li>
-{% endfor %}
+{% extends "base.html" %}
+
+{% block content %}
+  {% for product in object_list %}
+    <div class="col">
+      {% include "products/snippets/card.html" with instance=product %}
+    </div>
+  {% endfor %}
+{% endblock content %}
