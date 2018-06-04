@@ -1,0 +1,13 @@
+<ul>
+  <li>
+    {{object.title}}
+  </li>
+  <li>
+    {{object.description}}
+  </li>
+  <li>
+    {% if object.image %}
+      {{object.image.url}}
+    {% endif %}
+  </li>
+</ul>

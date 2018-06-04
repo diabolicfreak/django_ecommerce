@@ -1,5 +1,5 @@
 {% for product in object_list %}
   <li>
-    {{product.title}}
+    <a href="{{ product.get_absolute_url }}">{{product.title}}</a>
   </li>
 {% endfor %}
